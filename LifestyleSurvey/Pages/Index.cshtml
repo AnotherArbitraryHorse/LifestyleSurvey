@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Welcome To The Lifestyle Survey";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>To access the survey, please login.</p>
+</div>
+<div class="container">
+    <form method="post">
+        <div class="row">
+            <div class="col">
+                <label for="nhsno">NHS Number:</label>
+            </div>
+            <div class="col">
+                <input type="number" id="nhsno" name="nhsno" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="surname">Surname:</label>
+            </div>
+            <div class="col">
+                <input type="text" id="surname" name="surname" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="dob">Date Of Birth:</label>
+            </div>
+            <div class="col">
+                <input type="date" id="dob" name="dob" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="submit" value="Login"/>
+            </div>
+            <div class="col"/>
+        </div>
+        <p>@Model.Message</p>
+    </form>
+</div>

@@ -1,0 +1,34 @@
+﻿@page "/Survey"
+@model LifestyleSurvey.Pages.SurveyModel
+@{
+}
+
+@if (Request.Method.Equals("POST")) {
+    <p>@Model.Message</p>
+} else
+{
+<form method="post">
+    <div class="container">
+        <input type="hidden" name="ClassificationSource" id="ClassificationSource" value="@Model.ClassificationSource" />
+        <div class="table">
+        @foreach (var question in Questionnaire.TheQuestionnaire!.Questions)
+        {
+            <div class="row"><p><b>@question.Id</b> @question.Text</p></div>
+            <div class="row">
+            @foreach (var response in question.Responses)
+            {
+                <div class="col">
+                    <input type="radio" id="@question.Id@response.Text" name="@question.Id" value="@response.Text"/> <label for="@question.Id@response.Text">@response.Text</label>
+                </div>
+            }
+            </div>
+        }
+        <div class="row">
+            <div class="col">
+                <input type="submit" value="Submit" />
+            </div>
+        </div>
+        </div>
+    </div>
+</form>
+}

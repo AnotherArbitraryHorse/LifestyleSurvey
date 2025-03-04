@@ -1,0 +1,47 @@
+<questionnaire title="Lifestyle Checker" eligibilitySource="Age" GEQ="16">
+	<question id="Q1">
+		<text>Do you drink on more than 2 days a week?</text>
+		<response text="Yes">
+			<scoreClassification source="Age" GEQ="16" LEQ="21">1</scoreClassification>
+			<scoreClassification source="Age" GEQ="22" LEQ="40">2</scoreClassification>
+			<scoreClassification source="Age" GEQ="41" LEQ="64">3</scoreClassification>
+			<scoreClassification source="Age" GEQ="65">3</scoreClassification>
+		</response>
+		<response text="No">
+			<scoreClassification source="Age" GEQ="16" LEQ="21">0</scoreClassification>
+			<scoreClassification source="Age" GEQ="22" LEQ="40">0</scoreClassification>
+			<scoreClassification source="Age" GEQ="41" LEQ="64">0</scoreClassification>
+			<scoreClassification source="Age" GEQ="65">0</scoreClassification>
+		</response>
+	</question>
+	<question id="Q2">
+		<text>Do you smoke?</text>
+		<response text="Yes">
+			<scoreClassification source="Age" GEQ="16" LEQ="21">2</scoreClassification>
+			<scoreClassification source="Age" GEQ="22" LEQ="40">2</scoreClassification>
+			<scoreClassification source="Age" GEQ="41" LEQ="64">2</scoreClassification>
+			<scoreClassification source="Age" GEQ="65">3</scoreClassification>
+		</response>
+		<response text="No">
+			<scoreClassification source="Age" GEQ="16" LEQ="21">0</scoreClassification>
+			<scoreClassification source="Age" GEQ="22" LEQ="40">0</scoreClassification>
+			<scoreClassification source="Age" GEQ="41" LEQ="64">0</scoreClassification>
+			<scoreClassification source="Age" GEQ="65">0</scoreClassification>
+		</response>
+  </question>
+  <question id="Q3">
+	<text>Do you exercise more than 1 hour per week?</text>
+		<response text="Yes">
+			<scoreClassification source="Age" GEQ="16" LEQ="21">0</scoreClassification>
+			<scoreClassification source="Age" GEQ="22" LEQ="40">0</scoreClassification>
+			<scoreClassification source="Age" GEQ="41" LEQ="64">0</scoreClassification>
+			<scoreClassification source="Age" GEQ="65">0</scoreClassification>
+		</response>
+		<response text="No">
+			<scoreClassification source="Age" GEQ="16" LEQ="21">1</scoreClassification>
+			<scoreClassification source="Age" GEQ="22" LEQ="40">3</scoreClassification>
+			<scoreClassification source="Age" GEQ="41" LEQ="64">2</scoreClassification>
+			<scoreClassification source="Age" GEQ="65">1</scoreClassification>
+		</response>
+	</question>
+ </questionnaire>
