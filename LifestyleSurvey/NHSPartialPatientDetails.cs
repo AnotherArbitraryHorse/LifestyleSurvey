@@ -22,7 +22,8 @@ namespace LifestyleSurvey
             DateTime whenBorn = DateTime.ParseExact(born, "dd-MM-yyyy", CultureInfo.CurrentCulture);
             DateTime now = DateTime.UtcNow;
             // You don't get a year older until you've passed your birthday.
-            return now.Year - whenBorn.Year + ((now.DayOfYear >= whenBorn.DayOfYear) ? 1 : 0);
+            // (Fencepost error corrected 06/03/25 : Not made that mistake for a while!)
+            return now.Year - whenBorn.Year + ((now.DayOfYear >= whenBorn.DayOfYear) ? 0 : -1);
         }
         
 
